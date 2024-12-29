@@ -1,0 +1,16 @@
+export const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
+  "React.JS",
+  "Next.JS",
+  "Tailwind CSS",
+  "GraphQL",
+  "Apollo Client",
+  "Redux Toolkit",
+  "Git",
+  "React Query",
+  "Responsive Design",
+  "Accessibility",
+];
