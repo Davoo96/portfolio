@@ -1,9 +1,14 @@
-import { skills } from "./definitions";
 import Skill from "./skill";
 
-const TechStack = () => (
-  <div className="flex flex-wrap gap-8 justify-center">
-    {skills.map((skill) => (
+const TechStack = ({
+  techStack,
+  className,
+}: {
+  techStack: string[];
+  className: string;
+}) => (
+  <div className={className}>
+    {techStack.map((skill) => (
       <Skill key={skill} skill={skill} />
     ))}
   </div>
