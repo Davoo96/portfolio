@@ -1,11 +1,12 @@
 ---
 import TechStack from "@components/techStack";
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
   techStack: string[];
   href: string;
-  img: string;
+  img: ImageMetadata;
 }
 
 const { href, title, techStack, img } = Astro.props;
@@ -13,7 +14,7 @@ const { href, title, techStack, img } = Astro.props;
 
 <li class="grid grid-cols-1 gap-12 items-center">
   <a href={href} target="_blank" class="grid grid-cols-1 gap-6 items-start">
-    <img loading="lazy" src={img} alt={title} />
+    <Image src={img} alt={title} />
     <h3 class="text-white text-5xl">
       {title}
     </h3>

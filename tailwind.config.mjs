@@ -29,11 +29,9 @@ export default {
         header: "1fr 4fr",
       },
       backgroundImage: {
-        "imperfect-line": "url('src/assets/images/icons/imperfect_line.svg')",
-        "colored-imperfect-line":
-          "url('src/assets/images/icons/colored_imperfect_line.svg')",
-        star: "url('src/assets/images/icons/star.svg')",
-        swirl: "url('src/assets/images/icons/swirl.svg')",
+        "imperfect-line": "url('/icons/imperfect_line.svg')",
+        "colored-imperfect-line": "url('/icons/colored_imperfect_line.svg')",
+        star: "url('/icons/star.svg')",
       },
       keyframes: {
         draw: {
