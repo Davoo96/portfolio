@@ -7,112 +7,123 @@ import { projects } from "@components/projectCard/definitions";
 import ProjectCard from "@components/projectCard/ProjectCard.astro";
 import { skills } from "@components/techStack/definitions";
 import Form from "@components/form";
+import Footer from "@components/footer/Footer.astro";
 ---
 
 <Layout title="Carlo's Portfolio">
-  <main class="bg-dark-purple-200">
-    <div class="max-w-[1200px] mx-auto pt-36">
-      <div class="w-full grid place-items-center">
-        <p
-          class="inline-block font-poppins text-2xl text-transparent text-center bg-clip-text bg-gradient-to-r from-light-green to-light-orange"
-        >
-          Hi, i'm a Front-End Developer
-        </p>
-        <h1
-          class="font-poppins font-bold py-12 text-white text-8xl leading-snug"
-        >
-          <span
-            class="block relative before:absolute before:content-[''] before:bg-star before:w-[33px] before:h-[33px] before:-translate-y-2/4 before:-left-16 before:top-2/4"
+  <main>
+    <div class="bg-dark-purple-200 relative">
+      <div
+        class="absolute shadow-circle bg-dark-purple-200 rounded-full content-[''] w-[1600px] h-[1500px] -translate-x-2/4 left-2/4"
+      >
+      </div>
+      <div class="relative z-10 max-w-[1200px] mx-auto pt-36">
+        <div class="w-full grid place-items-center">
+          <p
+            class="inline-block font-poppins text-2xl text-transparent text-center bg-clip-text bg-gradient-to-r from-light-green to-light-orange"
           >
-            Coding <span
-              class="relative after:content-[''] after:absolute after:bg-colored-imperfect-line after:w-full after:h-6 after:left-0 after:bottom-0"
-              >the future</span
+            Hi, i'm a Front-End Developer
+          </p>
+          <h1
+            class="font-poppins font-bold py-12 text-white text-8xl leading-snug"
+          >
+            <span
+              class="block relative before:animate-shine before:absolute before:content-[''] before:bg-star before:w-[33px] before:h-[33px] before:-translate-y-2/4 before:-left-16 before:top-2/4"
             >
-          </span>
-          <span
-            class="block relative after:absolute after:content-[''] after:bg-star after:w-[33px] after:h-[33px] after:-right-11 after:translate-y-2/4 after:bottom-2/4"
-            >one line at a time</span
-          >
-        </h1>
+              Coding <span
+                class="relative after:animate-appear after:content-[''] after:absolute after:bg-colored-imperfect-line after:w-full after:h-6 after:left-0 after:bottom-0"
+                >the future</span
+              >
+            </span>
+            <span
+              class="block relative after:animate-shine after:absolute after:content-[''] after:bg-star after:w-[33px] after:h-[33px] after:-right-11 after:translate-y-2/4 after:bottom-2/4"
+              >one line at a time</span
+            >
+          </h1>
 
-        <Swirl />
-      </div>
+          <Swirl />
+        </div>
 
-      <div class="mt-44">
-        <TechStack
-          className="flex flex-wrap gap-8 justify-center"
-          techStack={skills}
-        />
-      </div>
-
-      <div class="mt-44 grid grid-cols-4 justify-between">
-        <SwirlArrow className="-rotate-[14deg]" />
-        <div class="col-span-3">
-          <p
-            class="inline-block text-6xl text-transparent leading-loose font-semibold bg-clip-text bg-gradient-to-r from-light-green to-light-orange"
-          >
-            Crafting Digital Experiences
-          </p>
-          <p
-            class="inline-block text-6xl text-transparent font-semibold bg-clip-text bg-gradient-to-r from-light-green to-light-orange"
-          >
-            That Inspire and Connect
-          </p>
-
-          <p class="text-2xl text-white mt-12 mb-8">
-            I'm a passionate Frontend Developer with 4 years of experience
-            building intuitive and high-performing websites, desktop, and mobile
-            applications. My focus is on creating seamless user experiences
-            through clean code and innovative design. I don't just write code—I
-            craft solutions that connect people and technology.
-          </p>
-
-          <a
-            class="relative text-white text-2xl underline pl-6 before:absolute before:content-[''] before:w-3 before:h-3 before:bg-dark-purple-600 before:rounded-full before:left-0 before:top-1/2 before:-translate-y-1/2"
-            href="/cv/Carlos_David_CV.pdf"
-            download>Download CV</a
-          >
+        <div class="mt-44">
+          <TechStack
+            className="flex flex-wrap gap-8 justify-center animate-slide-right"
+            techStack={skills}
+          />
         </div>
       </div>
+    </div>
+    <div class="bg-gradient-to-b from-dark-purple-200 to-dark-purple-700">
+      <div class="relative z-10 max-w-[1200px] mx-auto pt-36">
+        <div class="mt-44 grid grid-cols-4 justify-between" id="about">
+          <SwirlArrow className="-rotate-[14deg]" />
+          <div class="col-span-3">
+            <p
+              class="inline-block text-6xl text-transparent leading-loose font-semibold bg-clip-text bg-gradient-to-r from-light-green to-light-orange"
+            >
+              Crafting Digital Experiences
+            </p>
+            <p
+              class="inline-block text-6xl text-transparent font-semibold bg-clip-text bg-gradient-to-r from-light-green to-light-orange"
+            >
+              That Inspire and Connect
+            </p>
 
-      <section class="mt-44">
-        <h2
-          class="text-center text-light-green text-[234px] text-stroke-2 text-stroke-gradient mb-20"
-        >
-          Projects
-        </h2>
-        <ul class="grid grid-cols-2 gap-8">
-          {
-            projects.map((project) => (
-              <ProjectCard
-                title={project.title}
-                techStack={project.techStack}
-                href={project.githubUrl}
-                img={project.img}
-              />
-            ))
-          }
-        </ul>
-      </section>
+            <p class="text-2xl text-white mt-12 mb-8">
+              I'm a passionate Frontend Developer with 4 years of experience
+              building intuitive and high-performing websites, desktop, and
+              mobile applications. My focus is on creating seamless user
+              experiences through clean code and innovative design. I don't just
+              write code—I craft solutions that connect people and technology.
+            </p>
 
-      <div class="mt-44">
-        <h2
-          class="text-transparent text-[230px] leading-none bg-clip-text bg-gradient-to-r from-light-green to-light-orange mb-0"
-        >
-          Get in
-        </h2>
-        <div class="relative flex items-center mt-0">
-          <span class="text-white text-2xl max-w-[410px]"
-            >Looking to start a new project or just want to say hi?</span
-          >
+            <a
+              class="relative text-white text-2xl underline pl-6 before:absolute before:content-[''] before:w-3 before:h-3 before:bg-dark-purple-600 before:rounded-full before:left-0 before:top-1/2 before:-translate-y-1/2"
+              href="/cv/Carlos_David_CV.pdf"
+              download>Download CV</a
+            >
+          </div>
+        </div>
+
+        <section class="mt-44" id="projects">
           <h2
-            class="text-light-green text-[230px] text-stroke-2 text-stroke-gradient leading-[0]"
+            class="text-center text-light-green text-[234px] text-stroke-2 text-stroke-gradient mb-20"
           >
-            touch
+            Projects
           </h2>
+          <ul class="grid grid-cols-2 gap-8">
+            {
+              projects.map((project) => (
+                <ProjectCard
+                  title={project.title}
+                  techStack={project.techStack}
+                  href={project.githubUrl}
+                  img={project.img}
+                />
+              ))
+            }
+          </ul>
+        </section>
+
+        <div class="mt-44" id="contact">
+          <h2
+            class="animate-slide-right text-transparent text-[230px] leading-none bg-clip-text bg-gradient-to-r from-light-green to-light-orange mb-0"
+          >
+            Get in
+          </h2>
+          <div class="relative flex items-center mt-0">
+            <span class="text-white text-2xl max-w-[410px]"
+              >Looking to start a new project or just want to say hi?</span
+            >
+            <h2
+              class="text-light-green text-[230px] text-stroke-2 text-stroke-gradient leading-[0]"
+            >
+              touch
+            </h2>
+          </div>
+          <Form />
         </div>
-        <Form />
       </div>
+      <Footer />
     </div>
   </main>
 </Layout>

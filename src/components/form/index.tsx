@@ -40,7 +40,7 @@ const Form = () => {
         name="message"
       />
       <button
-        className="text-white border-2 border-white text-2xl py-5 rounded-[32px] max-w-[265px] transition-colors ease-in-out duration-300 hover:bg-gradient-to-r hover:from-light-green hover:to-light-orange hover:bg-clip-text hover:text-transparent"
+        className="text-white border-2 border-white text-2xl py-5 rounded-[32px] max-w-[265px] transition-all duration-300 ease-linear hover:bg-white/70 hover:text-dark-purple-200"
         type="submit"
       >
         Send

@@ -6,7 +6,7 @@ const Navbar = () => (
   <nav className="flex flex-rows items-center justify-between bg-transparent py-8 px-12">
     <div className="flex gap-3">
       <Logo className="w-8 h-8" />
-      <p className="font-poppins text-light-gray text-2xl">David Reyes</p>
+      <p className="font-poppins text-light-gray text-2xl">Carlos David</p>
     </div>
     <ul className="font-poppins text-light-gray text-2xl flex justify-between gap-24">
       {navigationItems.map((item, index) => (
